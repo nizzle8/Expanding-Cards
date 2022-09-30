@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+p {
+    color: black;
+    position: absolute;
+    bottom: -100px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    height: 60vh;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active p {
+    opacity: 1;
+    transition: opacity .7s ease-in 0.6s;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+
+    p {
+        bottom: -220px;
+    }
+}
+
+
+div #panel-1 {
+    background-image: url("https://images.unsplash.com/photo-1550016681-60a1d9d23bf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1463&q=80");
+    background-position-x: 80%;
+}
+
+div #panel-2 {
+    background-image: url("https://images.unsplash.com/photo-1557053503-0c252e5c8093?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=726&q=80");
+}
+
+div #panel-3 {
+    background-image: url("https://images.unsplash.com/photo-1573314229938-9e9a5df033a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+}
+
+div #panel-4 {
+    background-image: url("https://images.unsplash.com/photo-1596414086775-3e321ab08f36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1474&q=80");
+}
+
+div #panel-5 {
+    background-image: url("https://images.unsplash.com/photo-1618409869565-b0e4eabaf0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80");
+}
+
+
+
